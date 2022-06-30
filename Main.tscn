@@ -1,0 +1,201 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://Kapten.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tile_map_padat.tres" type="TileSet" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://tile_map_tembus.tres" type="TileSet" id=4]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" type="Texture" id=5]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" type="Texture" id=6]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Sky.png" type="Texture" id=7]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Big Clouds.png" type="Texture" id=8]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 2.png" type="Texture" id=9]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 1.png" type="Texture" id=10]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 3.png" type="Texture" id=11]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Medium 01.png" type="Texture" id=12]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Big 01.png" type="Texture" id=13]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Big 04.png" type="Texture" id=14]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Big 02.png" type="Texture" id=15]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Big 03.png" type="Texture" id=16]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Medium 02.png" type="Texture" id=17]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Medium 04.png" type="Texture" id=18]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Medium 03.png" type="Texture" id=19]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 04.png" type="Texture" id=20]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 02.png" type="Texture" id=21]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 01.png" type="Texture" id=22]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 03.png" type="Texture" id=23]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 160, 16 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 96, 16 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1599.5, 23.5 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Refleksi_besar",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Refleksi_sedang",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "Refleksi_kecil",
+"speed": 10.0
+} ]
+
+[node name="Level 1" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -97.0, 576.0, 96.0 ],
+"_edit_vertical_guides_": [ 1568.0 ]
+}
+
+[node name="Map_tembus" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 2
+collision_mask = 5
+format = 1
+tile_data = PoolIntArray( 131077, 4, 0, 131092, 4, 0, 131115, 4, 0, 196611, 4, 0, 327682, 4, 0, 327702, 4, 0, 327707, 4, 0, 393261, 4, 0, 458785, 0, 0, 458786, 1, 0, 458787, 1, 0, 458788, 1, 0, 458789, 1, 0, 458790, 2, 0, 524321, 3, 0, 524322, 4, 0, 524323, 4, 0, 524324, 4, 0, 524325, 4, 0, 524326, 5, 0, 589857, 3, 0, 589858, 4, 0, 589859, 4, 0, 589860, 4, 0, 589861, 4, 0, 589862, 5, 0, 655390, 0, 0, 655391, 1, 0, 655392, 1, 0, 655393, 1, 0, 655394, 1, 0, 655395, 1, 0, 655396, 1, 0, 655397, 1, 0, 655398, 1, 0, 655399, 2, 0, 720926, 3, 0, 720927, 4, 0, 720928, 4, 0, 720929, 4, 0, 720930, 4, 0, 720931, 4, 0, 720932, 4, 0, 720933, 4, 0, 720934, 4, 0, 720935, 5, 0, 720943, 4, 0, 786434, 4, 0, 786476, 4, 0, 786482, 4, 0 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Map_tembus"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_tembus/StaticBody2D"]
+position = Vector2( 1120, 336 )
+shape = SubResource( 5 )
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Map_tembus/StaticBody2D"]
+position = Vector2( 1152, 240 )
+shape = SubResource( 6 )
+one_way_collision = true
+
+[node name="Map_padat" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 2
+collision_mask = 5
+format = 1
+tile_data = PoolIntArray( -196608, 4, 0, -196607, 4, 0, -196606, 4, 0, -196605, 4, 0, -196604, 4, 0, -196603, 4, 0, -196602, 4, 0, -196601, 4, 0, -196600, 4, 0, -196599, 4, 0, -196598, 4, 0, -196597, 4, 0, -196596, 4, 0, -196595, 4, 0, -196594, 4, 0, -196593, 4, 0, -196592, 4, 0, -196591, 4, 0, -196590, 4, 0, -196589, 4, 0, -196588, 4, 0, -196587, 4, 0, -196586, 4, 0, -196585, 4, 0, -196584, 4, 0, -196583, 4, 0, -196582, 4, 0, -196581, 4, 0, -196580, 4, 0, -196579, 4, 0, -196578, 4, 0, -196577, 4, 0, -196576, 4, 0, -196575, 4, 0, -196574, 4, 0, -196573, 4, 0, -196572, 4, 0, -196571, 4, 0, -196570, 4, 0, -196569, 4, 0, -196568, 4, 0, -196567, 4, 0, -196566, 4, 0, -196565, 4, 0, -196564, 4, 0, -196563, 4, 0, -196562, 4, 0, -196561, 4, 0, -196560, 4, 0, -196559, 4, 0, -196558, 4, 0, -196557, 4, 0, -196556, 4, 0, -196555, 4, 0, -196554, 4, 0, -196553, 5, 0, -131072, 4, 0, -131071, 4, 0, -131070, 4, 0, -131069, 4, 0, -131068, 4, 0, -131067, 4, 0, -131066, 4, 0, -131065, 4, 0, -131064, 4, 0, -131063, 4, 0, -131062, 4, 0, -131061, 4, 0, -131060, 4, 0, -131059, 4, 0, -131058, 4, 0, -131057, 4, 0, -131056, 4, 0, -131055, 4, 0, -131054, 4, 0, -131053, 4, 0, -131052, 4, 0, -131051, 4, 0, -131050, 4, 0, -131049, 4, 0, -131048, 4, 0, -131047, 4, 0, -131046, 4, 0, -131045, 4, 0, -131044, 4, 0, -131043, 4, 0, -131042, 4, 0, -131041, 4, 0, -131040, 4, 0, -131039, 4, 0, -131038, 4, 0, -131037, 4, 0, -131036, 4, 0, -131035, 4, 0, -131034, 4, 0, -131033, 4, 0, -131032, 4, 0, -131031, 4, 0, -131030, 4, 0, -131029, 4, 0, -131028, 4, 0, -131027, 4, 0, -131026, 4, 0, -131025, 4, 0, -131024, 4, 0, -131023, 4, 0, -131022, 4, 0, -131021, 4, 0, -131020, 4, 0, -131019, 4, 0, -131018, 4, 0, -131017, 5, 0, -65536, 4, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0, -65532, 4, 0, -65531, 4, 0, -65530, 4, 0, -65529, 4, 0, -65528, 4, 0, -65527, 4, 0, -65526, 4, 0, -65525, 4, 0, -65524, 4, 0, -65523, 4, 0, -65522, 4, 0, -65521, 4, 0, -65520, 4, 0, -65519, 4, 0, -65518, 4, 0, -65517, 4, 0, -65516, 4, 0, -65515, 4, 0, -65514, 4, 0, -65513, 4, 0, -65512, 4, 0, -65511, 4, 0, -65510, 4, 0, -65509, 4, 0, -65508, 4, 0, -65507, 4, 0, -65506, 4, 0, -65505, 4, 0, -65504, 4, 0, -65503, 4, 0, -65502, 4, 0, -65501, 4, 0, -65500, 4, 0, -65499, 4, 0, -65498, 4, 0, -65497, 4, 0, -65496, 4, 0, -65495, 4, 0, -65494, 4, 0, -65493, 4, 0, -65492, 4, 0, -65491, 4, 0, -65490, 4, 0, -65489, 4, 0, -65488, 4, 0, -65487, 4, 0, -65486, 4, 0, -65485, 4, 0, -65484, 4, 0, -65483, 4, 0, -65482, 4, 0, -65481, 5, 0, 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 20, 4, 0, 21, 4, 0, 22, 4, 0, 23, 4, 0, 24, 4, 0, 25, 4, 0, 26, 4, 0, 27, 4, 0, 28, 4, 0, 29, 4, 0, 30, 4, 0, 31, 4, 0, 32, 4, 0, 33, 4, 0, 34, 4, 0, 35, 4, 0, 36, 4, 0, 37, 4, 0, 38, 4, 0, 39, 4, 0, 40, 4, 0, 41, 4, 0, 42, 4, 0, 43, 4, 0, 44, 4, 0, 45, 4, 0, 46, 4, 0, 47, 4, 0, 48, 4, 0, 49, 4, 0, 50, 4, 0, 51, 4, 0, 52, 4, 0, 53, 4, 0, 54, 4, 0, 55, 5, 0, 65536, 4, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 65552, 4, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 65556, 4, 0, 65557, 4, 0, 65558, 4, 0, 65559, 4, 0, 65560, 4, 0, 65561, 4, 0, 65562, 4, 0, 65563, 4, 0, 65564, 4, 0, 65565, 4, 0, 65566, 4, 0, 65567, 4, 0, 65568, 4, 0, 65569, 4, 0, 65570, 4, 0, 65571, 4, 0, 65572, 4, 0, 65573, 4, 0, 65574, 4, 0, 65575, 4, 0, 65576, 4, 0, 65577, 4, 0, 65578, 4, 0, 65579, 4, 0, 65580, 4, 0, 65581, 4, 0, 65582, 4, 0, 65583, 4, 0, 65584, 4, 0, 65585, 4, 0, 65586, 4, 0, 65587, 4, 0, 65588, 4, 0, 65589, 4, 0, 65590, 4, 0, 65591, 5, 0, 131072, 4, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 12, 0, 131078, 7, 0, 131079, 7, 0, 131080, 7, 0, 131081, 7, 0, 131082, 7, 0, 131083, 7, 0, 131084, 7, 0, 131085, 7, 0, 131086, 7, 0, 131087, 7, 0, 131088, 7, 0, 131089, 7, 0, 131090, 7, 0, 131091, 7, 0, 131092, 15, 0, 131093, 4, 0, 131094, 4, 0, 131095, 4, 0, 131096, 4, 0, 131097, 4, 0, 131098, 4, 0, 131099, 4, 0, 131100, 4, 0, 131101, 7, 0, 131102, 7, 0, 131103, 7, 0, 131104, 7, 0, 131105, 7, 0, 131106, 7, 0, 131107, 7, 0, 131108, 7, 0, 131109, 7, 0, 131110, 7, 0, 131111, 7, 0, 131112, 7, 0, 131113, 7, 0, 131114, 7, 0, 131115, 15, 0, 131116, 4, 0, 131117, 4, 0, 131118, 4, 0, 131119, 4, 0, 131120, 4, 0, 131121, 4, 0, 131122, 4, 0, 131123, 4, 0, 131124, 4, 0, 131125, 4, 0, 131126, 4, 0, 131127, 5, 0, 196608, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 12, 0, 196612, 7, 0, 196613, 8, 0, 196628, 3, 0, 196629, 4, 0, 196630, 4, 0, 196631, 4, 0, 196632, 4, 0, 196633, 4, 0, 196634, 4, 0, 196635, 4, 0, 196636, 5, 0, 196651, 3, 0, 196652, 4, 0, 196653, 4, 0, 196654, 4, 0, 196655, 4, 0, 196656, 4, 0, 196657, 4, 0, 196658, 4, 0, 196659, 4, 0, 196660, 4, 0, 196661, 4, 0, 196662, 4, 0, 196663, 5, 0, 262144, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 5, 0, 262164, 3, 0, 262165, 4, 0, 262166, 4, 0, 262167, 4, 0, 262168, 4, 0, 262169, 4, 0, 262170, 4, 0, 262171, 4, 0, 262172, 5, 0, 262187, 3, 0, 262188, 4, 0, 262189, 4, 0, 262190, 4, 0, 262191, 4, 0, 262192, 4, 0, 262193, 4, 0, 262194, 4, 0, 262195, 4, 0, 262196, 4, 0, 262197, 4, 0, 262198, 4, 0, 262199, 5, 0, 327680, 4, 0, 327681, 4, 0, 327682, 12, 0, 327683, 8, 0, 327700, 6, 0, 327701, 7, 0, 327702, 15, 0, 327703, 4, 0, 327704, 4, 0, 327705, 4, 0, 327706, 4, 0, 327707, 12, 0, 327708, 8, 0, 327723, 3, 0, 327724, 4, 0, 327725, 4, 0, 327726, 4, 0, 327727, 4, 0, 327728, 4, 0, 327729, 4, 0, 327730, 4, 0, 327731, 4, 0, 327732, 4, 0, 327733, 4, 0, 327734, 4, 0, 327735, 5, 0, 393216, 4, 0, 393217, 4, 0, 393218, 5, 0, 393238, 6, 0, 393239, 7, 0, 393240, 7, 0, 393241, 7, 0, 393242, 7, 0, 393243, 8, 0, 393259, 6, 0, 393260, 7, 0, 393261, 15, 0, 393262, 4, 0, 393263, 4, 0, 393264, 4, 0, 393265, 4, 0, 393266, 4, 0, 393267, 4, 0, 393268, 4, 0, 393269, 4, 0, 393270, 4, 0, 393271, 5, 0, 458752, 4, 0, 458753, 4, 0, 458754, 5, 0, 458797, 6, 0, 458798, 7, 0, 458799, 7, 0, 458800, 7, 0, 458801, 7, 0, 458802, 7, 0, 458803, 7, 0, 458804, 7, 0, 458805, 7, 0, 458806, 7, 0, 458807, 8, 0, 524288, 4, 0, 524289, 4, 0, 524290, 5, 0, 589824, 4, 0, 589825, 4, 0, 589826, 5, 0, 655360, 4, 0, 655361, 4, 0, 655362, 5, 0, 655404, 0, 0, 655405, 1, 0, 655406, 1, 0, 655407, 2, 0, 720896, 4, 0, 720897, 4, 0, 720898, 5, 0, 720940, 3, 0, 720941, 4, 0, 720942, 4, 0, 720943, 13, 0, 720944, 1, 0, 720945, 1, 0, 720946, 2, 0, 786432, 4, 0, 786433, 4, 0, 786434, 13, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 2, 0, 786456, 0, 0, 786457, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 1, 0, 786462, 1, 0, 786463, 1, 0, 786464, 1, 0, 786465, 1, 0, 786466, 1, 0, 786467, 1, 0, 786468, 1, 0, 786469, 1, 0, 786470, 1, 0, 786471, 1, 0, 786472, 1, 0, 786473, 1, 0, 786474, 1, 0, 786475, 1, 0, 786476, 14, 0, 786477, 4, 0, 786478, 4, 0, 786479, 4, 0, 786480, 4, 0, 786481, 4, 0, 786482, 13, 0, 786483, 1, 0, 786484, 1, 0, 786485, 1, 0, 786486, 1, 0, 786487, 1, 0, 786488, 1, 0, 786489, 1, 0, 786490, 1, 0, 786491, 2, 0, 851968, 4, 0, 851969, 4, 0, 851970, 4, 0, 851971, 4, 0, 851972, 4, 0, 851973, 4, 0, 851974, 4, 0, 851975, 4, 0, 851976, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 5, 0, 851992, 3, 0, 851993, 4, 0, 851994, 4, 0, 851995, 4, 0, 851996, 4, 0, 851997, 4, 0, 851998, 4, 0, 851999, 4, 0, 852000, 4, 0, 852001, 4, 0, 852002, 4, 0, 852003, 4, 0, 852004, 4, 0, 852005, 4, 0, 852006, 4, 0, 852007, 4, 0, 852008, 4, 0, 852009, 4, 0, 852010, 4, 0, 852011, 4, 0, 852012, 4, 0, 852013, 4, 0, 852014, 4, 0, 852015, 4, 0, 852016, 4, 0, 852017, 4, 0, 852018, 4, 0, 852019, 4, 0, 852020, 4, 0, 852021, 4, 0, 852022, 4, 0, 852023, 4, 0, 852024, 4, 0, 852025, 4, 0, 852026, 4, 0, 852027, 5, 0, 917504, 4, 0, 917505, 4, 0, 917506, 4, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917510, 4, 0, 917511, 4, 0, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 5, 0, 917528, 3, 0, 917529, 4, 0, 917530, 4, 0, 917531, 4, 0, 917532, 4, 0, 917533, 4, 0, 917534, 4, 0, 917535, 4, 0, 917536, 4, 0, 917537, 4, 0, 917538, 4, 0, 917539, 4, 0, 917540, 4, 0, 917541, 4, 0, 917542, 4, 0, 917543, 4, 0, 917544, 4, 0, 917545, 4, 0, 917546, 4, 0, 917547, 4, 0, 917548, 4, 0, 917549, 4, 0, 917550, 4, 0, 917551, 4, 0, 917552, 4, 0, 917553, 4, 0, 917554, 4, 0, 917555, 4, 0, 917556, 4, 0, 917557, 4, 0, 917558, 4, 0, 917559, 4, 0, 917560, 4, 0, 917561, 4, 0, 917562, 4, 0, 917563, 5, 0 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -104.0 ]
+}
+
+[node name="Kapten" parent="." instance=ExtResource( 1 )]
+position = Vector2( 183, 373 )
+collision_mask = 30
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 960, 679 )
+collision_layer = 16
+collision_mask = 5
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 928.5, 0 )
+shape = SubResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0, 0.15 )
+motion_offset = Vector2( 0, -175 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 0, 224 )
+scale = Vector2( 1.66667, 1 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 0, -160 )
+scale = Vector2( 20, 12 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 0, 352 )
+scale = Vector2( 20, 4 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Big_Cloud" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 1, 1, 1, 0.588235 )
+motion_scale = Vector2( 0.5, 0 )
+motion_offset = Vector2( 0, -180 )
+motion_mirroring = Vector2( 896, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Big_Cloud"]
+position = Vector2( 0, 160 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Big_Cloud"]
+position = Vector2( 448, 160 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Small_Cloud" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 0 )
+motion_offset = Vector2( 0, -240 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Small_Cloud"]
+position = Vector2( 352, 128 )
+texture = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Small_Cloud"]
+position = Vector2( 224, 192 )
+texture = ExtResource( 9 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/Small_Cloud"]
+position = Vector2( 461, 206 )
+texture = ExtResource( 11 )
+
+[node name="Refleksi_air" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 3, 0 )
+motion_scale = Vector2( 0.02, 0.15 )
+motion_offset = Vector2( -300, -175 )
+
+[node name="Refleksi_besar" type="AnimatedSprite" parent="ParallaxBackground/Refleksi_air"]
+position = Vector2( 319, 321 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 2 )
+animation = "Refleksi_besar"
+frame = 1
+playing = true
+
+[node name="Refleksi_sedang" type="AnimatedSprite" parent="ParallaxBackground/Refleksi_air"]
+position = Vector2( 301, 336 )
+scale = Vector2( 1.7, 1.7 )
+frames = SubResource( 3 )
+animation = "Refleksi_sedang"
+frame = 2
+playing = true
+
+[node name="Refleksi_kecil" type="AnimatedSprite" parent="ParallaxBackground/Refleksi_air"]
+position = Vector2( 326, 343 )
+frames = SubResource( 4 )
+animation = "Refleksi_kecil"
+frame = 2
+playing = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
