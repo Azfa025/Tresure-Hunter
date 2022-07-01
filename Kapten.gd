@@ -80,7 +80,7 @@ func ambil_coin():
 	coin_count += 1
 	print(coin_count)
 
-func kembali_ke_awal(pos):
+func start_game(pos):
 	position = pos
 	$Camera2D.position = Vector2.ZERO
 
@@ -91,9 +91,13 @@ func hit():
 	animSprite.play("hit")
 	if movement.x > 0:
 		movement.x = -500
-		movement.y = -100
-	else:
+		movement.y = -200
+	elif movement.x < 0:
 		movement.x = 500
-		movement.y = -100
+		movement.y = -200
+	else:
+		movement.y = -200
 	yield(get_tree().create_timer(0.2),"timeout")
 	get_hit = false
+
+

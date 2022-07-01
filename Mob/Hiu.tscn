@@ -66,7 +66,7 @@ animations = [ {
 extents = Vector2( 8.75, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 12, 5.5 )
+extents = Vector2( 12, 11.5 )
 
 [node name="Hiu" type="KinematicBody2D"]
 collision_layer = 4
@@ -76,7 +76,7 @@ script = ExtResource( 28 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "run"
-frame = 1
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -96,7 +96,7 @@ collision_mask = 2
 [node name="Area_damage" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area_damage"]
-position = Vector2( 0, 4.5 )
+position = Vector2( 0, -1.5 )
 shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Area_damage" to="." method="_on_Area_damage_body_entered"]

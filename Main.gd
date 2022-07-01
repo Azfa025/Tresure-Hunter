@@ -1,7 +1,11 @@
 extends Node
 
+onready var kapten = $Kapten
+onready var pos = $start_position
 
+func _ready():
+	kapten.start_game(pos.position)
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Kapten":
-		body.kembali_ke_awal(Vector2(180,370))
+		body.start_game(pos.position)
