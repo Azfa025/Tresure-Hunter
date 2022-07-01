@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 01.png" type="Texture" id=1]
 [ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 03.png" type="Texture" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/04-Fall/Fall 01.png" type="Texture" id=25]
 [ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/08-Hit/Hit 03.png" type="Texture" id=26]
 [ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 02.png" type="Texture" id=27]
+[ext_resource path="res://Mob/Hiu.gd" type="Script" id=28]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -64,14 +65,38 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8.75, 10 )
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 12, 5.5 )
+
 [node name="Hiu" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 19
+script = ExtResource( 28 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "idle "
-frame = 2
+animation = "run"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 2 )
 shape = SubResource( 2 )
+
+[node name="pivot" type="Node2D" parent="."]
+scale = Vector2( -1, 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="pivot"]
+position = Vector2( -12, -1 )
+enabled = true
+cast_to = Vector2( 0, 20 )
+collision_mask = 2
+
+[node name="Area_damage" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_damage"]
+position = Vector2( 0, 4.5 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area_damage" to="." method="_on_Area_damage_body_entered"]

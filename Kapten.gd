@@ -1,17 +1,21 @@
 extends KinematicBody2D
 
 
-export var JUMP_FORCE = 300
-const GRAVITASI = 10
-const ACCELERATION = 5
-var movement = Vector2.ZERO
-var max_speed = 200
-var jump_count = 0
-var air_jumped = false
+signal hit
 
+export var JUMP_FORCE = 300	#kekuatan lompat
+const GRAVITASI = 10		#Percepatan gravitasi
+const ACCELERATION = 5		#Percepatan
+var movement = Vector2.ZERO	#Titik awal dan penentu arah
+var max_speed = 200			#Batas kecepatan Kapten
+var jump_count = 0			#variabel untuk menghitung jumlah lompatan
+var air_jumped = false		#variable untuk melompat diudara
+
+var get_hit = false
+#variable untuk menghitung jumlah coin yang didapat
 var coin_count = 0
 
-
+#variable untuk seberapa banyak serangan
 var attack_count = 0
 
 var screen_size
@@ -25,11 +29,11 @@ func _physics_process(_delta):
 	
 	move_and_slide(movement,Vector2(0,-1))
 
-	if Input.is_action_pressed("KANAN"):
+	if !get_hit and Input.is_action_pressed("KANAN"):
 		movement.x += ACCELERATION
 		movement.x = min(movement.x, max_speed)
 		
-	elif Input.is_action_pressed("KIRI"):
+	elif!get_hit and Input.is_action_pressed("KIRI"):
 		movement.x -= ACCELERATION
 		movement.x = max(movement.x, -max_speed)
 
@@ -39,7 +43,7 @@ func _physics_process(_delta):
 	if is_on_ceiling():
 		movement.y = 0
 
-	if Input.is_action_just_pressed("LOMPAT"):
+	if !get_hit and Input.is_action_just_pressed("LOMPAT"):
 		if is_on_floor():
 			movement.y = -JUMP_FORCE
 		elif !air_jumped:
@@ -53,8 +57,8 @@ func _physics_process(_delta):
 	else:
 		movement.y += GRAVITASI
 	
-	
-	animation_update()
+	if !get_hit:
+		animation_update()
 
 func animation_update():
 	#Animasi
@@ -75,3 +79,21 @@ func animation_update():
 func ambil_coin():
 	coin_count += 1
 	print(coin_count)
+
+func kembali_ke_awal(pos):
+	position = pos
+	$Camera2D.position = Vector2.ZERO
+
+var a = 0
+
+func hit():
+	get_hit = true
+	animSprite.play("hit")
+	if movement.x > 0:
+		movement.x = -500
+		movement.y = -100
+	else:
+		movement.x = 500
+		movement.y = -100
+	yield(get_tree().create_timer(0.2),"timeout")
+	get_hit = false
