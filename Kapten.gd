@@ -9,6 +9,8 @@ var max_speed = 200
 var jump_count = 0
 var air_jumped = false
 
+var coin_count = 0
+
 
 var attack_count = 0
 
@@ -69,3 +71,7 @@ func animation_update():
 	
 	animSprite.flip_h = false
 	if movement.x < 0: animSprite.flip_h = true
+
+func ambil_coin():
+	coin_count += 1
+	print(coin_count)
