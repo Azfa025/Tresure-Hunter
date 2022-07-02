@@ -35,9 +35,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 23 ), ExtResource( 15 ), ExtResource( 26 ), ExtResource( 9 ) ],
-"loop": false,
-"name": "hit",
+"frames": [ ExtResource( 18 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "run",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 25 ) ],
@@ -45,29 +45,29 @@ animations = [ {
 "name": "fall",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "run",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 14 ), ExtResource( 12 ), ExtResource( 8 ) ],
 "loop": false,
 "name": "jump",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
+"frames": [ ExtResource( 23 ), ExtResource( 15 ), ExtResource( 26 ), ExtResource( 9 ) ],
 "loop": false,
-"name": "dead_hit",
+"name": "hit",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "idle ",
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "dead_hit",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "attack",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "idle ",
 "speed": 10.0
 } ]
 
@@ -75,7 +75,7 @@ animations = [ {
 extents = Vector2( 8.75, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 12, 11.5 )
+extents = Vector2( 11.5, 11.5 )
 
 [node name="Hiu" type="KinematicBody2D"]
 collision_layer = 4
@@ -84,12 +84,12 @@ script = ExtResource( 28 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "dead_hit"
+animation = "run"
 frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 2 )
+position = Vector2( 0, -1 )
 shape = SubResource( 2 )
 
 [node name="pivot" type="Node2D" parent="."]
@@ -104,7 +104,7 @@ collision_mask = 2
 [node name="Area_damage" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area_damage"]
-position = Vector2( 0, -1.5 )
+position = Vector2( 0.5, -0.5 )
 shape = SubResource( 3 )
 
 [connection signal="area_entered" from="Area_damage" to="." method="_on_Area_damage_area_entered"]

@@ -82,7 +82,7 @@ func _hiu_mati():
 
 
 func _on_Area_damage_area_entered(area):
-	if area.is_in_group("sword"):
+	if area.is_in_group("sword") and not hiu_get_hit:
 		_hiu_get_hit()
 		
 		

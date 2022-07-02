@@ -1,29 +1,28 @@
 extends KinematicBody2D
 
-export var JUMP_FORCE = 300	#kekuatan lompat
+signal Kapten_update_health(value)
+signal Kapten_update_coin(value)
+
+export var JUMP_FORCE = 320	#kekuatan lompat
 const GRAVITASI = 10		#Percepatan gravitasi
 const ACCELERATION = 5		#Percepatan
 var movement = Vector2.ZERO	#Titik awal dan penentu arah
 var max_speed = 200			#Batas kecepatan Kapten
 var jump_count = 0			#variabel untuk menghitung jumlah lompatan
 var air_jumped = false		#variable untuk melompat diudara
-
 var get_hit = false
-#variable untuk menghitung jumlah coin yang didapat
-var coin_count = 0
-
+var coin_count = 0		#variable untuk menghitung jumlah coin yang didapat#variable untuk menghitung jumlah coin yang didapat
 var isAttacking = false
+var attack_count = 0 #variable untuk seberapa banyak serangan
+var maks_nyawa  = 200
+var nyawa = 200
 
-#variable untuk seberapa banyak serangan
-var attack_count = 0
-
-var screen_size
 onready var animSprite = $AnimatedSprite
 
 
 func _ready():
-	screen_size = get_viewport_rect().size
-	
+	pass
+
 func _physics_process(_delta):
 	
 	move_and_slide(movement,Vector2(0,-1))
@@ -79,17 +78,22 @@ func _physics_process(_delta):
 		isAttacking = true
 		animSprite.play("air_attack1")
 		$AirAttackArea/CollisionShape2D.disabled = false
+		movement.y = 0
+		movement.x = 0
 		attack_count += 1
 		
 	elif Input.is_action_just_pressed("ATTACK") and attack_count == 1 and !is_on_floor():
 		isAttacking = true
 		animSprite.play("air_attack2")
 		$AirAttackArea/CollisionShape2D.disabled = false
+		movement.y = 0
+		movement.x = 0
 		attack_count = 0
-		
+	
 	if !get_hit:
 		_animation_update()
-
+	if nyawa > 200:
+		nyawa = 200
 
 func _animation_update():
 	#Animasi
@@ -108,9 +112,11 @@ func _animation_update():
 	
 	animSprite.flip_h = false
 	$Attack_Area.scale.x = 1
+	$AirAttackArea.scale.x = 1
 	if movement.x < 0:
 		animSprite.flip_h = true
 		$Attack_Area.scale.x = -1
+		$AirAttackArea.scale.x = -1
 	
 func _on_AnimatedSprite_animation_finished():
 	if animSprite.animation == "attack1" or "attack2" or "attack3" or "air_attack1" or "air_attack2":
@@ -118,12 +124,12 @@ func _on_AnimatedSprite_animation_finished():
 		$AirAttackArea/CollisionShape2D.disabled = true
 		isAttacking = false
 		attack_count = 0
-		
-		
 
 func _ambil_coin():
 	coin_count += 1
-	print(coin_count)
+	nyawa += 20
+	emit_signal("Kapten_update_health",float(nyawa)/float(maks_nyawa) * 100)
+	emit_signal("Kapten_update_coin",str(coin_count))
 
 func _start_game(pos):
 	position = pos
@@ -131,6 +137,10 @@ func _start_game(pos):
 
 func _hit():
 	get_hit = true
+	
+	nyawa -= 50
+	emit_signal("Kapten_update_health",float(nyawa)/float(maks_nyawa) * 100)
+	
 	animSprite.play("hit")
 	if movement.x > 0:
 		movement.x = -500
@@ -139,7 +149,17 @@ func _hit():
 		movement.x = 500
 		movement.y = -200
 	yield(get_tree().create_timer(0.2),"timeout")
-	get_hit = false
+	if nyawa <= 0:
+		mati()
+	else:
+		get_hit = false
+
+func mati():
+	$AnimatedSprite.play("dead_ground")
+	yield(get_tree().create_timer(0.2),"timeout")
+	get_tree().change_scene("res://source/Level 1.tscn")
+	set_collision_layer_bit(0,false)
+	set_collision_mask_bit(2,false)
 
 func _lempar_pedang():
 	pass
