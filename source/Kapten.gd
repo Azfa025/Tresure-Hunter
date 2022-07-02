@@ -1,8 +1,5 @@
 extends KinematicBody2D
 
-
-signal hit
-
 export var JUMP_FORCE = 300	#kekuatan lompat
 const GRAVITASI = 10		#Percepatan gravitasi
 const ACCELERATION = 5		#Percepatan
@@ -14,6 +11,8 @@ var air_jumped = false		#variable untuk melompat diudara
 var get_hit = false
 #variable untuk menghitung jumlah coin yang didapat
 var coin_count = 0
+
+var isAttacking = false
 
 #variable untuk seberapa banyak serangan
 var attack_count = 0
@@ -33,10 +32,11 @@ func _physics_process(_delta):
 		movement.x += ACCELERATION
 		movement.x = min(movement.x, max_speed)
 		
+		
 	elif!get_hit and Input.is_action_pressed("KIRI"):
 		movement.x -= ACCELERATION
 		movement.x = max(movement.x, -max_speed)
-
+		
 	else:
 		movement.x = lerp(movement.x, 0 , 0.1)
 
@@ -56,48 +56,83 @@ func _physics_process(_delta):
 		
 	else:
 		movement.y += GRAVITASI
+		
+	if Input.is_action_just_pressed("ATTACK") and attack_count == 0:
+		isAttacking = true
+		animSprite.play("attack1")
+		$Attack_Area/CollisionShape2D.disabled = false
+		attack_count += 1
+	elif Input.is_action_just_pressed("ATTACK") and attack_count == 1:
+		isAttacking = true
+		animSprite.play("attack2")
+		$Attack_Area/CollisionShape2D.disabled = false
+		attack_count += 1
+	elif Input.is_action_just_pressed("ATTACK") and attack_count == 2:
+		isAttacking = true
+		animSprite.play("attack3")
+		$Attack_Area/CollisionShape2D.disabled = false
+		attack_count = 0
+	
+	print(attack_count)
+		
+		
 	
 	if !get_hit:
-		animation_update()
+		_animation_update()
 
-func animation_update():
+
+func _animation_update():
 	#Animasi
 	if is_on_floor():
-		if movement.x < 2.5 and movement.x > -2.5:
+		if movement.x < 2.5 and movement.x > -2.5 and isAttacking == false:
 			animSprite.play("idle")
 		else:
-			animSprite.play("run")
+			if isAttacking == false:
+				animSprite.play("run")
 	else:
-		if movement.y > 0:
+		if movement.y > 0 and isAttacking == false:
 			animSprite.play("fall")
 		else:
-			animSprite.play("jump")
+			if isAttacking == false:
+				animSprite.play("jump")
 	
 	animSprite.flip_h = false
-	if movement.x < 0: animSprite.flip_h = true
+	$Attack_Area.scale.x = 1
+	if movement.x < 0:
+		animSprite.flip_h = true
+		$Attack_Area.scale.x = -1
+	
+func _on_AnimatedSprite_animation_finished():
+	if animSprite.animation == "attack1" or "or attack2" or "attack3":
+		$Attack_Area/CollisionShape2D.disabled = true
+		isAttacking = false
 
-func ambil_coin():
+func _ambil_coin():
 	coin_count += 1
 	print(coin_count)
 
-func start_game(pos):
+func _start_game(pos):
 	position = pos
 	$Camera2D.position = Vector2.ZERO
 
-var a = 0
-
-func hit():
+func _hit():
 	get_hit = true
 	animSprite.play("hit")
 	if movement.x > 0:
 		movement.x = -500
 		movement.y = -200
-	elif movement.x < 0:
-		movement.x = 500
-		movement.y = -200
 	else:
+		movement.x = 500
 		movement.y = -200
 	yield(get_tree().create_timer(0.2),"timeout")
 	get_hit = false
+
+func _lempar_pedang():
+	pass
+
+func _ambil_pedang():
+	pass
+
+
 
 
