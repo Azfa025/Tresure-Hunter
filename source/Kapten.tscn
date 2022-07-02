@@ -50,7 +50,7 @@ position = Vector2( 19, -2 )
 shape = SubResource( 3 )
 disabled = true
 
-[node name="AirAttackArea" type="Area2D" parent="."]
+[node name="AirAttackArea" type="Area2D" parent="." groups=["sword"]]
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AirAttackArea"]

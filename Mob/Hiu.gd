@@ -6,6 +6,8 @@ const ACCELERATION = 50
 var movement = Vector2.ZERO
 var arah = 1
 
+export var nyawa_hiu = 3
+
 var hiu_get_hit = false
 
 onready var pivot = $pivot
@@ -33,13 +35,14 @@ func _physics_process(delta):
 		_update_animasi_hiu()
 
 func _update_animasi_hiu():
-	if is_on_floor():
+	if is_on_floor() and hiu_get_hit == false:
 		$AnimatedSprite.play("run")
 	else:
-		$AnimatedSprite.play("fall")
+		if hiu_get_hit == false:
+			$AnimatedSprite.play("fall")
 	
 	$AnimatedSprite.flip_h = true
-	if arah == -1:
+	if arah == -1 :
 		$AnimatedSprite.flip_h = false
 
 func _on_Area_damage_body_entered(body):
@@ -50,8 +53,9 @@ func _on_Area_damage_body_entered(body):
 		
 func _hiu_get_hit():
 	hiu_get_hit = true
-	$AnimatedSprite.play("dead_hit")
-	$Area_damage/CollisionShape2D.disabled = true
+	$AnimatedSprite.play("hit")
+	nyawa_hiu -= 1
+	
 	if movement.x > 0:
 		movement.x = 0
 		movement.y = -500
@@ -59,14 +63,26 @@ func _hiu_get_hit():
 	else:
 		movement.x = 0
 		movement.y = -500
-		
-	yield(get_tree().create_timer(0),"timeout")
+	yield(get_tree().create_timer(1),"timeout")
+	hiu_get_hit = false
+	
+	if nyawa_hiu <= 0:
+		hiu_get_hit = true
+		$AnimatedSprite.play("dead_hit")
+		_hiu_mati()
 
+func _hiu_mati():
+	
+	set_collision_layer_bit(2,false)
+	set_collision_mask_bit(0, false)
+	$Area_damage.set_collision_layer_bit(2,false)
+	$Area_damage.set_collision_mask_bit(0,false)
+	yield(get_tree().create_timer(0.3),"timeout")
+	queue_free()
 
 
 func _on_Area_damage_area_entered(area):
 	if area.is_in_group("sword"):
 		_hiu_get_hit()
-		yield(get_tree().create_timer(1),"timeout")
-		queue_free()
+		
 		

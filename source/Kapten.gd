@@ -33,7 +33,7 @@ func _physics_process(_delta):
 		movement.x = min(movement.x, max_speed)
 		
 		
-	elif!get_hit and Input.is_action_pressed("KIRI"):
+	elif !get_hit and Input.is_action_pressed("KIRI"):
 		movement.x -= ACCELERATION
 		movement.x = max(movement.x, -max_speed)
 		
@@ -57,26 +57,36 @@ func _physics_process(_delta):
 	else:
 		movement.y += GRAVITASI
 		
-	if Input.is_action_just_pressed("ATTACK") and attack_count == 0:
+	if Input.is_action_just_pressed("ATTACK") and attack_count == 0 and is_on_floor():
 		isAttacking = true
 		animSprite.play("attack1")
 		$Attack_Area/CollisionShape2D.disabled = false
 		attack_count += 1
-	elif Input.is_action_just_pressed("ATTACK") and attack_count == 1:
+		
+	elif Input.is_action_just_pressed("ATTACK") and attack_count == 1 and is_on_floor():
 		isAttacking = true
 		animSprite.play("attack2")
 		$Attack_Area/CollisionShape2D.disabled = false
 		attack_count += 1
-	elif Input.is_action_just_pressed("ATTACK") and attack_count == 2:
+		
+	elif Input.is_action_just_pressed("ATTACK") and attack_count == 2 and is_on_floor():
 		isAttacking = true
 		animSprite.play("attack3")
 		$Attack_Area/CollisionShape2D.disabled = false
 		attack_count = 0
-	
-	print(attack_count)
 		
+	if Input.is_action_just_pressed("ATTACK") and attack_count == 0 and !is_on_floor():
+		isAttacking = true
+		animSprite.play("air_attack1")
+		$AirAttackArea/CollisionShape2D.disabled = false
+		attack_count += 1
 		
-	
+	elif Input.is_action_just_pressed("ATTACK") and attack_count == 1 and !is_on_floor():
+		isAttacking = true
+		animSprite.play("air_attack2")
+		$AirAttackArea/CollisionShape2D.disabled = false
+		attack_count = 0
+		
 	if !get_hit:
 		_animation_update()
 
@@ -103,9 +113,13 @@ func _animation_update():
 		$Attack_Area.scale.x = -1
 	
 func _on_AnimatedSprite_animation_finished():
-	if animSprite.animation == "attack1" or "or attack2" or "attack3":
+	if animSprite.animation == "attack1" or "attack2" or "attack3" or "air_attack1" or "air_attack2":
 		$Attack_Area/CollisionShape2D.disabled = true
+		$AirAttackArea/CollisionShape2D.disabled = true
 		isAttacking = false
+		attack_count = 0
+		
+		
 
 func _ambil_coin():
 	coin_count += 1

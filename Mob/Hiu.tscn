@@ -40,14 +40,9 @@ animations = [ {
 "name": "hit",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead_hit",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 12 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "jump",
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "fall",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 11 ) ],
@@ -55,9 +50,14 @@ animations = [ {
 "name": "run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 25 ) ],
-"loop": true,
-"name": "fall",
+"frames": [ ExtResource( 14 ), ExtResource( 12 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead_hit",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 22 ) ],
