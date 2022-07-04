@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=2]
+
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Green Button/1.png" type="Texture" id=1]
+
+[resource]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 14, 14 )
+margin_left = 3.08006
+margin_right = 1.04865
+margin_bottom = 3.14595

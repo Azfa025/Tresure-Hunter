@@ -48,8 +48,7 @@ func _update_animasi_hiu():
 func _on_Area_damage_body_entered(body):
 	if body.name == "Kapten":
 		body._hit()
-	elif body.name == "Attack_Area":
-		print("AW")
+	
 		
 func _hiu_get_hit():
 	hiu_get_hit = true

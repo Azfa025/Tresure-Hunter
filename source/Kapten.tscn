@@ -32,6 +32,7 @@ shape = SubResource( 2 )
 current = true
 limit_left = 0
 limit_top = -500
+limit_right = 10000
 limit_bottom = 480
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true

@@ -1,0 +1,391 @@
+[gd_scene load_steps=73 format=2]
+
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Medium 04.png" type="Texture" id=1]
+[ext_resource path="res://source/tile_map_padat.tres" type="TileSet" id=2]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 3.png" type="Texture" id=3]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Big 01.png" type="Texture" id=4]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 1.png" type="Texture" id=5]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 02.png" type="Texture" id=6]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Big 02.png" type="Texture" id=7]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Medium 02.png" type="Texture" id=8]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 03.png" type="Texture" id=9]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Medium 03.png" type="Texture" id=10]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 04.png" type="Texture" id=11]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 01.png" type="Texture" id=12]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Sky.png" type="Texture" id=13]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" type="Texture" id=14]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" type="Texture" id=15]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Medium 01.png" type="Texture" id=16]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Big Clouds.png" type="Texture" id=17]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Big 04.png" type="Texture" id=18]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Big 03.png" type="Texture" id=19]
+[ext_resource path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 2.png" type="Texture" id=20]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/3.png" type="Texture" id=21]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 01.png" type="Texture" id=22]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 03.png" type="Texture" id=23]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 02.png" type="Texture" id=24]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 04.png" type="Texture" id=25]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 05.png" type="Texture" id=26]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 04.png" type="Texture" id=27]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/08-Hit/Hit 03.png" type="Texture" id=28]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/09-Dead Hit/Dead Hit 01.png" type="Texture" id=29]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/09-Dead Hit/Dead Hit 02.png" type="Texture" id=30]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/09-Dead Hit/Dead Hit 04.png" type="Texture" id=31]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 06.png" type="Texture" id=32]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/09-Dead Hit/Dead Hit 03.png" type="Texture" id=33]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 02.png" type="Texture" id=34]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/08-Hit/Hit 04.png" type="Texture" id=35]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/08-Hit/Hit 02.png" type="Texture" id=36]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 03.png" type="Texture" id=37]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 07.png" type="Texture" id=38]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/03-Jump/Jump 02.png" type="Texture" id=39]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/08-Hit/Hit 01.png" type="Texture" id=40]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 04.png" type="Texture" id=41]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 02.png" type="Texture" id=42]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 01.png" type="Texture" id=43]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 05.png" type="Texture" id=44]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/03-Jump/Jump 03.png" type="Texture" id=45]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 05.png" type="Texture" id=46]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/03-Jump/Jump 01.png" type="Texture" id=47]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 08.png" type="Texture" id=48]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 06.png" type="Texture" id=49]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 01.png" type="Texture" id=50]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 03.png" type="Texture" id=51]
+[ext_resource path="res://Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/04-Fall/Fall 01.png" type="Texture" id=52]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Text/1.png" type="Texture" id=53]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Text/19.png" type="Texture" id=54]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Text/21.png" type="Texture" id=55]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Text/5.png" type="Texture" id=56]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Text/20.png" type="Texture" id=57]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Text/18.png" type="Texture" id=58]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Text/8.png" type="Texture" id=59]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Text/14.png" type="Texture" id=60]
+[ext_resource path="res://kirsty/kirsty rg.otf" type="DynamicFontData" id=61]
+[ext_resource path="res://Green_button.tres" type="StyleBox" id=62]
+[ext_resource path="res://source/tile_map_tembus.tres" type="TileSet" id=63]
+[ext_resource path="res://Title_Screen.gd" type="Script" id=64]
+[ext_resource path="res://CenterContainer.gd" type="Script" id=65]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Refleksi_besar",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "Refleksi_sedang",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Refleksi_kecil",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 30 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "dead_hit",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 42 ), ExtResource( 37 ), ExtResource( 41 ), ExtResource( 26 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 47 ), ExtResource( 39 ), ExtResource( 45 ) ],
+"loop": false,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 52 ) ],
+"loop": true,
+"name": "fall",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 36 ), ExtResource( 28 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "hit",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 46 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "idle ",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 34 ), ExtResource( 51 ), ExtResource( 27 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "attack",
+"speed": 10.0
+} ]
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 61 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 61 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 61 )
+
+[node name="Title_Screen" type="Node"]
+script = ExtResource( 64 )
+
+[node name="BackGround" type="Node2D" parent="."]
+
+[node name="TileMap2" type="TileMap" parent="BackGround"]
+tile_set = ExtResource( 63 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 65536, 4, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 65552, 4, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 131072, 4, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 7, 0, 131079, 7, 0, 131080, 7, 0, 131081, 7, 0, 131082, 7, 0, 131083, 7, 0, 131084, 7, 0, 131085, 7, 0, 131086, 7, 0, 131087, 7, 0, 131088, 7, 0, 131089, 4, 0, 131090, 4, 0, 131091, 4, 0, 196608, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 7, 0, 196613, 8, 0, 196625, 3, 0, 196626, 4, 0, 196627, 4, 0, 262144, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 5, 0, 262161, 3, 0, 262162, 4, 0, 262163, 4, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 8, 0, 327697, 3, 0, 327698, 4, 0, 327699, 4, 0, 393216, 4, 0, 393217, 4, 0, 393218, 5, 0, 393233, 3, 0, 393234, 4, 0, 393235, 4, 0, 458752, 4, 0, 458753, 4, 0, 458754, 5, 0, 458769, 3, 0, 458770, 4, 0, 458771, 4, 0, 524288, 4, 0, 524289, 4, 0, 524290, 5, 0, 524305, 3, 0, 524306, 4, 0, 524307, 4, 0, 589824, 4, 0, 589825, 4, 0, 589826, 5, 0, 589841, 3, 0, 589842, 4, 0, 589843, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 5, 0, 655372, 0, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 4, 0, 655378, 4, 0, 655379, 4, 0, 720896, 4, 0, 720897, 4, 0, 720898, 5, 0, 720908, 3, 0, 720909, 4, 0, 720910, 4, 0, 720911, 4, 0, 720912, 4, 0, 720913, 4, 0, 720914, 4, 0, 720915, 4, 0, 786432, 4, 0, 786433, 4, 0, 786434, 13, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 4, 0, 786445, 4, 0, 786446, 4, 0, 786447, 4, 0, 786448, 4, 0, 786449, 4, 0, 786450, 4, 0, 786451, 4, 0, 851968, 4, 0, 851969, 4, 0, 851970, 4, 0, 851971, 4, 0, 851972, 4, 0, 851973, 4, 0, 851974, 4, 0, 851975, 4, 0, 851976, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 4, 0, 917504, 4, 0, 917505, 4, 0, 917506, 4, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917510, 4, 0, 917511, 4, 0, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0 )
+
+[node name="TileMap" type="TileMap" parent="BackGround"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 65536, 4, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 65552, 4, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 131072, 4, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 12, 0, 131078, 7, 0, 131079, 7, 0, 131080, 7, 0, 131081, 7, 0, 131082, 7, 0, 131083, 7, 0, 131084, 7, 0, 131085, 7, 0, 131086, 7, 0, 131087, 7, 0, 131088, 7, 0, 131089, 15, 0, 131090, 4, 0, 131091, 4, 0, 196608, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 12, 0, 196612, 7, 0, 196613, 8, 0, 196625, 3, 0, 196626, 4, 0, 196627, 4, 0, 262144, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 5, 0, 262161, 3, 0, 262162, 4, 0, 262163, 4, 0, 327680, 4, 0, 327681, 4, 0, 327682, 12, 0, 327683, 8, 0, 327697, 3, 0, 327698, 4, 0, 327699, 4, 0, 393216, 4, 0, 393217, 4, 0, 393218, 5, 0, 393233, 3, 0, 393234, 4, 0, 393235, 4, 0, 458752, 4, 0, 458753, 4, 0, 458754, 5, 0, 458769, 3, 0, 458770, 4, 0, 458771, 4, 0, 524288, 4, 0, 524289, 4, 0, 524290, 5, 0, 524305, 3, 0, 524306, 4, 0, 524307, 4, 0, 589824, 4, 0, 589825, 4, 0, 589826, 5, 0, 589841, 3, 0, 589842, 4, 0, 589843, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 5, 0, 655372, 0, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 14, 0, 655378, 4, 0, 655379, 4, 0, 720896, 4, 0, 720897, 4, 0, 720898, 5, 0, 720908, 3, 0, 720909, 4, 0, 720910, 4, 0, 720911, 4, 0, 720912, 4, 0, 720913, 4, 0, 720914, 4, 0, 720915, 4, 0, 786432, 4, 0, 786433, 4, 0, 786434, 13, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 14, 0, 786445, 4, 0, 786446, 4, 0, 786447, 4, 0, 786448, 4, 0, 786449, 4, 0, 786450, 4, 0, 786451, 4, 0, 851968, 4, 0, 851969, 4, 0, 851970, 4, 0, 851971, 4, 0, 851972, 4, 0, 851973, 4, 0, 851974, 4, 0, 851975, 4, 0, 851976, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 4, 0, 917504, 4, 0, 917505, 4, 0, 917506, 4, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917510, 4, 0, 917511, 4, 0, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="BackGround"]
+
+[node name="Background" type="ParallaxLayer" parent="BackGround/ParallaxBackground"]
+motion_scale = Vector2( 0, 0.15 )
+motion_offset = Vector2( 0, -175 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackGround/ParallaxBackground/Background"]
+position = Vector2( 0, 224 )
+scale = Vector2( 1.66667, 1 )
+texture = ExtResource( 14 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="BackGround/ParallaxBackground/Background"]
+position = Vector2( 0, -160 )
+scale = Vector2( 20, 12 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="BackGround/ParallaxBackground/Background"]
+position = Vector2( 0, 352 )
+scale = Vector2( 20, 4 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Big_Cloud" type="ParallaxLayer" parent="BackGround/ParallaxBackground"]
+modulate = Color( 1, 1, 1, 0.588235 )
+motion_scale = Vector2( 0.5, 0 )
+motion_offset = Vector2( 0, -180 )
+motion_mirroring = Vector2( 896, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackGround/ParallaxBackground/Big_Cloud"]
+position = Vector2( 0, 160 )
+texture = ExtResource( 17 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="BackGround/ParallaxBackground/Big_Cloud"]
+position = Vector2( 448, 160 )
+texture = ExtResource( 17 )
+centered = false
+
+[node name="Small_Cloud" type="ParallaxLayer" parent="BackGround/ParallaxBackground"]
+motion_scale = Vector2( 0.7, 0 )
+motion_offset = Vector2( 0, -240 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="BackGround/ParallaxBackground/Small_Cloud"]
+position = Vector2( 352, 128 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="BackGround/ParallaxBackground/Small_Cloud"]
+position = Vector2( 224, 192 )
+texture = ExtResource( 20 )
+
+[node name="Sprite3" type="Sprite" parent="BackGround/ParallaxBackground/Small_Cloud"]
+position = Vector2( 461, 206 )
+texture = ExtResource( 3 )
+
+[node name="Refleksi_air" type="ParallaxLayer" parent="BackGround/ParallaxBackground"]
+position = Vector2( 3, 0 )
+motion_scale = Vector2( 0.02, 0.15 )
+motion_offset = Vector2( -300, -175 )
+
+[node name="Refleksi_besar" type="AnimatedSprite" parent="BackGround/ParallaxBackground/Refleksi_air"]
+position = Vector2( 319, 321 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "Refleksi_besar"
+frame = 2
+playing = true
+
+[node name="Refleksi_sedang" type="AnimatedSprite" parent="BackGround/ParallaxBackground/Refleksi_air"]
+position = Vector2( 301, 336 )
+scale = Vector2( 1.7, 1.7 )
+frames = SubResource( 2 )
+animation = "Refleksi_sedang"
+frame = 3
+playing = true
+
+[node name="Refleksi_kecil" type="AnimatedSprite" parent="BackGround/ParallaxBackground/Refleksi_air"]
+position = Vector2( 326, 343 )
+frames = SubResource( 3 )
+animation = "Refleksi_kecil"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="BackGround"]
+position = Vector2( 150, 372 )
+frames = SubResource( 4 )
+animation = "idle "
+frame = 2
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="BackGround"]
+position = Vector2( 481, 307 )
+frames = SubResource( 4 )
+animation = "idle "
+frame = 2
+playing = true
+flip_h = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 18.0
+margin_right = 20.0
+margin_bottom = 58.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -64.0
+margin_right = 64.0
+margin_bottom = 64.0
+script = ExtResource( 65 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/CenterContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 21 )
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenterContainer"]
+margin_left = 35.0
+margin_top = 25.0
+margin_right = 93.0
+margin_bottom = 102.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/CenterContainer/HBoxContainer"]
+margin_right = 58.0
+margin_bottom = 23.1459
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = ExtResource( 62 )
+custom_styles/focus = ExtResource( 62 )
+custom_styles/disabled = ExtResource( 62 )
+custom_styles/normal = ExtResource( 62 )
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control/CenterContainer/HBoxContainer"]
+margin_top = 27.0
+margin_right = 58.0
+margin_bottom = 50.1459
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = ExtResource( 62 )
+custom_styles/focus = ExtResource( 62 )
+custom_styles/disabled = ExtResource( 62 )
+custom_styles/normal = ExtResource( 62 )
+text = "QUIT"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Control/CenterContainer/HBoxContainer"]
+margin_top = 54.0
+margin_right = 58.1287
+margin_bottom = 77.1459
+custom_fonts/font = SubResource( 7 )
+custom_styles/hover = ExtResource( 62 )
+custom_styles/focus = ExtResource( 62 )
+custom_styles/disabled = ExtResource( 62 )
+custom_styles/normal = ExtResource( 62 )
+text = "CREDIT"
+
+[node name="Tween" type="Tween" parent="CanvasLayer/Control/CenterContainer"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( -196, -152 )
+scale = Vector2( 2, 2 )
+
+[node name="20" type="Sprite" parent="Node2D"]
+position = Vector2( 216, 156 )
+texture = ExtResource( 57 )
+
+[node name="24" type="Sprite" parent="Node2D"]
+position = Vector2( 264, 172 )
+texture = ExtResource( 57 )
+
+[node name="18" type="Sprite" parent="Node2D"]
+position = Vector2( 228, 156 )
+texture = ExtResource( 58 )
+
+[node name="25" type="Sprite" parent="Node2D"]
+position = Vector2( 288, 172 )
+texture = ExtResource( 58 )
+
+[node name="5" type="Sprite" parent="Node2D"]
+position = Vector2( 240, 156 )
+texture = ExtResource( 56 )
+
+[node name="7" type="Sprite" parent="Node2D"]
+position = Vector2( 276, 172 )
+texture = ExtResource( 56 )
+
+[node name="6" type="Sprite" parent="Node2D"]
+position = Vector2( 300, 156 )
+texture = ExtResource( 56 )
+
+[node name="1" type="Sprite" parent="Node2D"]
+position = Vector2( 252, 156 )
+texture = ExtResource( 53 )
+
+[node name="19" type="Sprite" parent="Node2D"]
+position = Vector2( 264, 156 )
+texture = ExtResource( 54 )
+
+[node name="21" type="Sprite" parent="Node2D"]
+position = Vector2( 276, 156 )
+texture = ExtResource( 55 )
+
+[node name="22" type="Sprite" parent="Node2D"]
+position = Vector2( 288, 156 )
+texture = ExtResource( 58 )
+
+[node name="8" type="Sprite" parent="Node2D"]
+position = Vector2( 228, 172 )
+texture = ExtResource( 59 )
+
+[node name="23" type="Sprite" parent="Node2D"]
+position = Vector2( 240, 172 )
+texture = ExtResource( 55 )
+
+[node name="14" type="Sprite" parent="Node2D"]
+position = Vector2( 252, 172 )
+texture = ExtResource( 60 )
+
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/HBoxContainer/Button3" to="CanvasLayer/Control/CenterContainer" method="_on_Button3_pressed"]

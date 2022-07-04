@@ -19,6 +19,7 @@ var attack_count = 0 #variable untuk seberapa banyak serangan
 var maks_nyawa  = 200
 var nyawa = 200
 var sudah_mati = false
+var sudah_menang = false
 
 onready var animSprite = $AnimatedSprite
 
@@ -98,6 +99,9 @@ func _physics_process(_delta):
 	if nyawa > 200:
 		nyawa = 200
 	print(nyawa)
+	
+	if sudah_menang:
+		movement.x = 30
 
 func _animation_update():
 	#Animasi
@@ -180,6 +184,7 @@ func _ambil_pedang():
 	pass
 
 
-
-
-
+func _on_Area2D_body_entered(body):
+	sudah_mati = true
+	sudah_menang = true
+	

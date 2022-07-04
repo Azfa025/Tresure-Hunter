@@ -21,3 +21,11 @@ func _on_Kapten_Kapten_update_coin(value):
 	Coin_count.text = value
 
 
+
+
+func _on_MenutButton_pressed():
+	get_tree().change_scene("res://Title_Screen.tscn")
+
+
+func _on_MenuButton_pressed():
+	get_tree().change_scene("res://Title_Screen.tscn")

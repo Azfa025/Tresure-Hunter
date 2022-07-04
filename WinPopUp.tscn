@@ -37,20 +37,20 @@ texture = ExtResource( 4 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 20.0
 margin_top = 25.0
-margin_right = 108.0
+margin_right = 107.0
 margin_bottom = 103.0
 
-[node name="GameOverLabel" type="Label" parent="VBoxContainer"]
-margin_right = 88.0
+[node name="WinLabel" type="Label" parent="VBoxContainer"]
+margin_right = 87.0
 margin_bottom = 20.0
 custom_fonts/font = SubResource( 9 )
-text = "Game Over"
+text = "You WIn"
 align = 1
 uppercase = true
 
 [node name="RepeatButton" type="Button" parent="VBoxContainer"]
 margin_top = 24.0
-margin_right = 88.0
+margin_right = 87.0
 margin_bottom = 49.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 10 )
@@ -61,9 +61,9 @@ custom_styles/disabled = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
 text = "Next Level"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="MenuButton" type="Button" parent="VBoxContainer"]
 margin_top = 53.0
-margin_right = 88.0
+margin_right = 87.0
 margin_bottom = 78.0
 custom_fonts/font = SubResource( 12 )
 custom_styles/hover = ExtResource( 3 )
