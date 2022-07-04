@@ -34,12 +34,11 @@ func _physics_process(_delta):
 	if !get_hit and Input.is_action_pressed("KANAN") and sudah_mati == false:
 		movement.x += ACCELERATION
 		movement.x = min(movement.x, max_speed)
-		
-		
+
 	elif !get_hit and Input.is_action_pressed("KIRI") and sudah_mati == false:
 		movement.x -= ACCELERATION
 		movement.x = max(movement.x, -max_speed)
-		
+
 	else:
 		movement.x = lerp(movement.x, 0 , 0.1)
 
@@ -165,7 +164,6 @@ func _hit():
 func mati():
 	$AnimatedSprite.play("dead_ground")
 	yield(get_tree().create_timer(0.2),"timeout")
-#	get_tree().change_scene("res://source/Level 1.tscn")
 	set_collision_layer_bit(0,false)
 	set_collision_mask_bit(2,false)
 	emit_signal("Game_Over")
@@ -175,14 +173,6 @@ func nyemplung():
 	nyawa -= 2000
 	emit_signal("Kapten_update_health",float(nyawa)/float(maks_nyawa) * 100)
 	mati()
-	
-
-func _lempar_pedang():
-	pass
-
-func _ambil_pedang():
-	pass
-
 
 func _on_Area2D_body_entered(body):
 	sudah_mati = true

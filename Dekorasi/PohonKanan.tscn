@@ -18,5 +18,5 @@ animations = [ {
 [node name="AnimasiPohon" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Pohon Right"
-frame = 2
+frame = 3
 playing = true
