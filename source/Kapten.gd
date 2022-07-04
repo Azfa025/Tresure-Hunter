@@ -130,7 +130,7 @@ func _on_AnimatedSprite_animation_finished():
 		$Attack_Area/CollisionShape2D.disabled = true
 		$AirAttackArea/CollisionShape2D.disabled = true
 		isAttacking = false
-		attack_count = 0
+		
 
 func _ambil_coin():
 	coin_count += 1

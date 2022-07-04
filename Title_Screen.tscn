@@ -97,16 +97,6 @@ animations = [ {
 "name": "dead_hit",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 46 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 48 ) ],
-"loop": true,
-"name": "idle ",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 52 ) ],
-"loop": true,
-"name": "fall",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 47 ), ExtResource( 39 ), ExtResource( 45 ) ],
 "loop": false,
 "name": "jump",
@@ -122,9 +112,19 @@ animations = [ {
 "name": "hit",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 46 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "idle ",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 50 ), ExtResource( 34 ), ExtResource( 51 ), ExtResource( 27 ), ExtResource( 44 ) ],
 "loop": true,
 "name": "attack",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 52 ) ],
+"loop": true,
+"name": "fall",
 "speed": 10.0
 } ]
 
@@ -222,7 +222,6 @@ position = Vector2( 319, 321 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Refleksi_besar"
-frame = 1
 playing = true
 
 [node name="Refleksi_sedang" type="AnimatedSprite" parent="BackGround/ParallaxBackground/Refleksi_air"]
@@ -230,28 +229,28 @@ position = Vector2( 301, 336 )
 scale = Vector2( 1.7, 1.7 )
 frames = SubResource( 2 )
 animation = "Refleksi_sedang"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Refleksi_kecil" type="AnimatedSprite" parent="BackGround/ParallaxBackground/Refleksi_air"]
 position = Vector2( 326, 343 )
 frames = SubResource( 3 )
 animation = "Refleksi_kecil"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="BackGround"]
 position = Vector2( 100, 212 )
 frames = SubResource( 4 )
 animation = "idle "
-frame = 5
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="BackGround"]
 position = Vector2( 400, 308 )
 frames = SubResource( 4 )
 animation = "idle "
-frame = 5
+frame = 4
 playing = true
 flip_h = true
 
