@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://source/Coin.tscn" type="PackedScene" id=1]
 [ext_resource path="res://source/Kapten.tscn" type="PackedScene" id=2]
@@ -33,6 +33,8 @@
 [ext_resource path="res://Dekorasi/PohonKiri.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Dekorasi/PohonKanan.tscn" type="PackedScene" id=32]
 [ext_resource path="res://source/Spike.tscn" type="PackedScene" id=33]
+[ext_resource path="res://kirsty/kirsty rg.otf" type="DynamicFontData" id=34]
+[ext_resource path="res://Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/1.png" type="Texture" id=35]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 160, 16 )
@@ -45,6 +47,21 @@ extents = Vector2( 192, 13.5 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 128.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 304, 16 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 305, 16 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 177, 17 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 113, 17 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 85, 16 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2648, 23.5 )
@@ -75,6 +92,21 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 112, 332 )
+
+[sub_resource type="DynamicFont" id=15]
+font_data = ExtResource( 34 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 35 )
+region_rect = Rect2( 0, 0, 64, 64 )
+margin_left = 12.0
+margin_right = 12.0
+
+[sub_resource type="DynamicFont" id=17]
+font_data = ExtResource( 34 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 297, 128 )
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource( 4 )
@@ -114,6 +146,31 @@ one_way_collision = true
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Map_tembus/StaticBody2D"]
 position = Vector2( 2912.5, 203 )
 shape = SubResource( 8 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Map_tembus/StaticBody2D"]
+position = Vector2( 7280, 144 )
+shape = SubResource( 10 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Map_tembus/StaticBody2D"]
+position = Vector2( 7407, 16 )
+shape = SubResource( 11 )
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Map_tembus/StaticBody2D"]
+position = Vector2( 7408, -112 )
+shape = SubResource( 12 )
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Map_tembus/StaticBody2D"]
+position = Vector2( 8239, 175 )
+shape = SubResource( 13 )
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Map_tembus/StaticBody2D"]
+position = Vector2( 8427, 208 )
+shape = SubResource( 14 )
 one_way_collision = true
 
 [node name="Map_padat" type="TileMap" parent="."]
@@ -412,7 +469,7 @@ position = Vector2( 319, 321 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 2 )
 animation = "Refleksi_besar"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Refleksi_sedang" type="AnimatedSprite" parent="ParallaxBackground/Refleksi_air"]
@@ -420,12 +477,14 @@ position = Vector2( 301, 336 )
 scale = Vector2( 1.7, 1.7 )
 frames = SubResource( 3 )
 animation = "Refleksi_sedang"
+frame = 3
 playing = true
 
 [node name="Refleksi_kecil" type="AnimatedSprite" parent="ParallaxBackground/Refleksi_air"]
 position = Vector2( 326, 343 )
 frames = SubResource( 4 )
 animation = "Refleksi_kecil"
+frame = 3
 playing = true
 
 [node name="coin_group" type="Node2D" parent="."]
@@ -1066,6 +1125,42 @@ position = Vector2( 4104, -640 )
 [node name="Hiu34" parent="Mob_group" instance=ExtResource( 3 )]
 position = Vector2( 5136, -512 )
 
+[node name="Hiu35" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 6184, -200 )
+
+[node name="Hiu36" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 6408, -200 )
+
+[node name="Hiu37" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 6392, -320 )
+
+[node name="Hiu38" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 6328, -456 )
+
+[node name="Hiu39" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 7088, -64 )
+
+[node name="Hiu40" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 7456, -128 )
+
+[node name="Hiu41" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 7224, -160 )
+
+[node name="Hiu42" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 7304, -32 )
+
+[node name="Hiu43" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 8216, -32 )
+
+[node name="Hiu44" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 8384, -64 )
+
+[node name="Hiu45" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 8576, -96 )
+
+[node name="Hiu46" parent="Mob_group" instance=ExtResource( 3 )]
+position = Vector2( 8728, -128 )
+
 [node name="Hiu33" parent="Mob_group" instance=ExtResource( 3 )]
 position = Vector2( 4976, -128 )
 
@@ -1212,6 +1307,32 @@ position = Vector2( 5872, -208 )
 [node name="Spike42" parent="spike_group" instance=ExtResource( 33 )]
 position = Vector2( 5840, -208 )
 
+[node name="Label" type="Label" parent="."]
+margin_left = 2792.0
+margin_top = -440.0
+margin_right = 2973.0
+margin_bottom = -420.0
+custom_fonts/font = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+text = "ENTE NGAPAIN KE SINI?"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 1344.0
+margin_top = -120.0
+margin_right = 1496.0
+margin_bottom = -106.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 17 )
+custom_styles/normal = SubResource( 16 )
+text = "DISINI KAGA ADA APA-APA"
+
+[node name="Troll Area" type="Area2D" parent="."]
+position = Vector2( 0, -240 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Troll Area"]
+position = Vector2( 303, 8 )
+shape = SubResource( 18 )
+
 [connection signal="pressed" from="GUI/GameOverPopUp/VBoxContainer/MenutButton" to="." method="_on_MenutButton_pressed"]
 [connection signal="pressed" from="GUI/WinPopUp/VBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
 [connection signal="Game_Over" from="Kapten" to="GUI/GameOverPopUp" method="_on_Kapten_Game_Over"]
@@ -1221,6 +1342,7 @@ position = Vector2( 5840, -208 )
 [connection signal="body_entered" from="Zona Jatuh" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="win_area" to="GUI/WinPopUp" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="win_area" to="Kapten" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Troll Area" to="." method="_on_Troll_Area_body_entered"]
 
 [editable path="GUI/GameOverPopUp"]
 [editable path="GUI/WinPopUp"]
