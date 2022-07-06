@@ -10,6 +10,7 @@ onready var label2 = $Label2
 
 func _ready():
 	kapten._start_game(pos.position)
+	$game_music.playing = true
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Kapten":

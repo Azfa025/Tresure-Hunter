@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/perilousSkies.mp3-5f6b610d4c7980e0c78c7d469bb72584.mp3str"
+
+[deps]
+
+source_file="res://source/perilousSkies.mp3"
+dest_files=[ "res://.import/perilousSkies.mp3-5f6b610d4c7980e0c78c7d469bb72584.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

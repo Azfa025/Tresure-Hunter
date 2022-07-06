@@ -97,7 +97,6 @@ func _physics_process(_delta):
 		_animation_update()
 	if nyawa > 200:
 		nyawa = 200
-	print(nyawa)
 	
 	if sudah_menang:
 		movement.x = 30

@@ -13,13 +13,12 @@ config_version=4
 config/name="Treasure Hunters"
 run/main_scene="res://Title_Screen.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [display]
 
 window/size/width=600
 window/size/height=400
-window/size/test_width=1280
-window/size/test_height=960
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

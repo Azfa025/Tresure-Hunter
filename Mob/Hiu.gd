@@ -68,11 +68,10 @@ func _hiu_get_hit():
 		set_collision_mask_bit(0, false)
 		$Area_damage.set_collision_layer_bit(2,false)
 		$Area_damage.set_collision_mask_bit(0,false)
-		yield(get_tree().create_timer(1),"timeout")
 		_hiu_mati()
-		
-	yield(get_tree().create_timer(1),"timeout")
-	hiu_get_hit = false
+	else:
+		yield(get_tree().create_timer(1),"timeout")
+		hiu_get_hit = false
 
 func _hiu_mati():
 	
